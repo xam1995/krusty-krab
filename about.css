@@ -15,10 +15,22 @@ body {
     background-color: #ebeccf;
 }
 
+.krabby-red {
+    background-color: #ff3b3b;
+}
+
 .text-krabby-light {
     color: #ebeccf;
 }
 
 .text-krabby-red {
     color: #ff3b3b;
+}
+
+.text-krabby-blue {
+    color: #0457A0;
+}
+
+.text-spongebob-yellow {
+    color: #f7e948;
 }

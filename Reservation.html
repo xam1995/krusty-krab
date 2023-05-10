@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="author" content="Max">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Reservation</title>
+    <title>The Krusty Krab - Reservation</title>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js">$('.dropdown-toggle').dropdown()</script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -19,12 +19,12 @@
     <div class="collapse navbar-collapse justify-content-md-center" id="navbar-burger">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link">
+                <a href="" class="nav-link">
                     Home
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link">
+                <a href="Menu.html" class="nav-link">
                     Menu
                 </a>
             </li>
@@ -34,7 +34,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link">
+                <a href="merch.html" class="nav-link">
                     Merchandise
                 </a>
             </li>
@@ -47,11 +47,11 @@
     </div>
 </nav>
 <div class="position-relative overflow-hidden text-center vh-100 d-flex justify-content-center align-items-center row krabby-light">
-    <div class="col-md-4">
+    <div class="col-md-4 my-2">
         <h1 class="display-4 font-weight-normal text-krabby-red">RESERVATION</h1>
         <p class="lead font-weight-normal">Come Spend Your Money Here!</p>
-        <p class="font-weight-normal">Monday - Sundays, 11a.m. - 10p.m.</p>
-        <a class="btn btn-outline-danger" href="#book">Book table</a>
+        <p class="font-weight-normal">Monday - Sunday, 11a.m. - 10p.m.</p>
+        <a class="btn btn-outline-danger mb-2" href="#book">Book table</a>
     </div>
     <div class="col-md-4">
         <img class="img-fluid" alt="mrKrabs"
@@ -59,23 +59,23 @@
     </div>
 </div>
 <div id="book"
-     class="position-relative overflow-hidden text-center vh-100 d-flex justify-content-center align-items-center row bg-light">
+     class="position-relative overflow-auto text-center vh-100 d-flex justify-content-center align-items-center row bg-light">
     <div class="col-md-4">
         <img alt="spongebob" class="img-fluid" src="Spongebob-squarepants.png">
     </div>
     <div class="col-md-4">
-        <h1 class="display-4 font-weight-normal text-krabby-blue">DATE</h1>
+        <h1 class="display-4 font-weight-normal text-krabby-blue">YOUR BOOKING</h1>
         <p class="lead font-weight-normal">Chose a date:</p>
-        <form class="d-flex flex-wrap flex-column">
-            <div>
+        <form class="d-flex flex-wrap flex-column align-items-center">
+            <div class="w-75 d-flex justify-content-between">
                 <label for="date">Date:</label>
                 <input class="input-lg col-xs" id="date" type="date" value="2023-05-11" required/>
             </div>
-            <div>
+            <div class="w-75 d-flex justify-content-between">
                 <label for="time">Time:</label>
                 <input class="input-lg col-xs" id="time" type="time" min="11:00" max="22:00" required/>
             </div>
-            <div class="dropdown">
+            <div class="dropdown w-75 d-flex justify-content-between">
                 <label>Guests:</label>
                 <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -87,20 +87,20 @@
                     <a class="dropdown-item" href="#">Something else here</a>
                 </div>
             </div>
-            <div>
+            <div class="w-75 d-flex justify-content-between">
                 <label for="name">Name:</label>
                 <input class="input-sm  col-xs"  id="name" type="name" placeholder="Patrick Star" required/>
             </div>
-            <div>
+            <div class="w-75 d-flex justify-content-between">
                 <label for="tel">Phone:</label>
                 <input class="input-lg"  id="tel" type="tel" placeholder="+99 123 456 789" required/>
             </div>
-            <div>
+            <div class="w-75 d-flex justify-content-between">
                 <label for="mail">Mail:</label>
                 <input class="input-lg"  id="mail" type="email" placeholder="patrickstar84@snailmail.com" required/>
             </div>
             <div>
-                <input type="submit">
+                <input type="submit" class="my-3 krabby-blue text-krabby-light">
             </div>
         </form>
     </div>

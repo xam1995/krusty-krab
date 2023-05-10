@@ -5,21 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Krusty Krab Merchandise</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="about.css">
     <style>
-        @font-face {
-            font-family: krabbyPatty;
-            src: url("Krabby Patty.ttf");
-        }
-
-        body {
-            font-family: krabbyPatty;
-        }
-
         .product {
             opacity: 0;
-            animation: fadeIn 2s ease-in-out forwards;
+            animation: fadeIn 1s ease-in-out forwards;
         }
-
         .product:nth-child(even) {
             animation-name: fadeInRight;
         }
@@ -61,43 +52,30 @@
             }
         }
 
-        body {
-            background-color: #9dc9fb;
-        }
-
-        .thumbnail {
-            background-color: #ebeccf;
-        }
-
-        .btn-primary {
-            background-color: #ff3b3b;
-        }
-
         .merch-sticker {
             position: absolute;
             top: 10px;
             right: 10px;
             padding: 5px 10px;
             background-color: #ff3b3b;
-            color: #fff;
-            font-weight: bold;
+            color: #ebeccf;
             font-size: 14px;
             text-transform: uppercase;
             z-index: 1;
         }
     </style>
 </head>
-<body>
+<body class="krabby-blue">
 
 <div class="container">
-    <h1>The Krusty Krab Merchandise</h1>
     <br>
     <div class="col-md-4 product">
-        <div class="thumbnail">
+        <div class="thumbnail krabby-light">
             <img src="img/spatula.webp" alt="Spatula">
-            <div class="merch-sticker">Brand Neu</div>
+            <div class="merch-sticker">Brand Neu eingetroffen</div>
             <div class="caption">
-                <h2>Spongebob's spatula</h2>
+                <h2 class="text-krabby-blue">Spongebob's spatula</h2>
+
                 <p> This high-quality spatula is made of stainless steel and has a silicone tip shaped like
                     Spongebob's
                     face. The spatula is not only a fun accessory in the kitchen, but also extremely functional and
@@ -109,7 +87,7 @@
         </div>
     </div>
     <div class="col-md-4 product">
-        <div class="thumbnail">
+        <div class="thumbnail krabby-light">
             <img src="img/Krusty_Krab_hat.webp" width="300" height="375" alt="Krusty Krap Hat">
             <div class="caption">
                 <h2>The Krusty Krab Hat</h2>
@@ -121,9 +99,9 @@
         </div>
     </div>
     <div class="col-md-4 product">
-        <div class="thumbnail">
+        <div class="thumbnail krabby-light">
             <img src="img/krusty-krab-sticker.png.crdownload" alt="Krusty Krap Sticker 1">
-            <div class="merch-sticker">Brand Neu</div>
+            <div class="merch-sticker">Brand Neu eingetroffen</div>
             <div class="caption">
                 <h2>The Krusty Krab Stickers</h2>
                 <p> Stick it on your laptop, stick it on your car, stick it on your face (just kidding, please don't
@@ -135,7 +113,7 @@
         </div>
     </div>
     <div class="col-md-4 product">
-        <div class="thumbnail">
+        <div class="thumbnail krabby-light">
             <img src="img/homeOfTheKrabbyPatty.webp" alt="Krusty Krap Hat">
             <div class="caption">
                 <h2>Home of the Krabby Patty Sticker</h2>

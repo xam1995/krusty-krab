@@ -1,0 +1,24 @@
+@font-face {
+    font-family: krabbyPatty;
+    src: url("Krabby Patty.ttf");
+}
+
+body {
+    font-family: krabbyPatty;
+}
+
+.krabby-blue {
+    background-color: #0457A0;
+}
+
+.krabby-light {
+    background-color: #ebeccf;
+}
+
+.text-krabby-light {
+    color: #ebeccf;
+}
+
+.text-krabby-red {
+    color: #ff3b3b;
+}

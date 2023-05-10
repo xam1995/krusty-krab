@@ -1,0 +1,74 @@
+.foodPlaceHolder {
+    min-height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.burger {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.top-bun,
+.bottom-bun {
+    width: 90%;
+
+
+}
+
+.top-bun {
+    border-radius: 55px 55px 0 0;
+    margin-top: 1%;
+    margin-left: 5%;
+    margin-right: auto;
+    height: 70px;
+    background: linear-gradient(to bottom, #d2b063, #f2c04c);
+}
+
+.bottom-bun {
+    border-radius: 0 0 30px 30px;
+    height: 40px;
+    background: linear-gradient(to bottom, #f2c04c 30%, #d2b063 90%);
+}
+
+.lettuce {
+    width: 100%;
+    height: 10px;
+    background-color: #8bc34a;
+    border-radius: 20px;
+}
+
+.tomato-container {
+    display: flex;
+    justify-content: center;
+    height: 10px;
+    width: 100%;
+}
+
+.tomato {
+    width: 45%;
+    height: 100%;
+    background-color: #ff7043;
+    border-radius: 5%;
+    margin-left: .5%;
+    margin-right: .5%;
+
+}
+
+.cheese {
+    width: 98%;
+    height: 10px;
+    background-color: #ffcc80;
+    border-radius: 4px;
+}
+
+.beef {
+    width: 95%;
+    height: 40px;
+    background: repeating-linear-gradient(to right, #5d4037 5px, #492b23 2px, #5d4037 5px, #492b23 2px);
+    border-radius: 30px;
+}

@@ -114,7 +114,7 @@ section {
     background-position: center;
 }
 
-@media only screen and (max-width: 600px) {
+@media screen and (max-width: 1300px) {
     .krusty-krab {
         width: 110vw;
         clip-path: inset(74% 0 0px 0px round 0px);

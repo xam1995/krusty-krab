@@ -59,7 +59,7 @@
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
             <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="index.html">Home</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="Menu.html">Menu</a>
@@ -87,7 +87,7 @@
 </nav>
 
 <div class="container my-5">
-    <h1>Our Burger</h1>
+    <h1>Our Burgers</h1>
     <hr>
     <div class="row">
         <div class="col-md-4">
@@ -382,15 +382,16 @@
                 </div>
             </div>
 
+<!-- DRINKS  _---------------------------------------------        -->
+
         <h1>Our Drinks</h1>
         <hr>
             <div class="col-md-4">
                 <div class="card mb-4">
                     <div class="foodPlaceHolder">
-                        <div class="kelp-shake">
-                            <div class="straw"></div>
-                            <div class="liquid"></div>
-                        </div>
+                        <div class="kelp-shake"> </div>
+
+
 
                     </div>
                     <div class="card-body">
@@ -414,16 +415,42 @@
                     </div>
                     <div class="card-body">
                         <h5 class="card-title">Seafoam Soda</h5>
-                        <p class="card-text">Choose from small, medium, or large sizes.</p>
-                        <p class="card-text">Small - $1.00<br>Medium - $1.25<br>Large - $1.50</p>
-                        <button type="button" class="btn btn-primary">small</button>
-                        <button type="button" class="btn btn-primary">middle</button>
-                        <button type="button" class="btn btn-primary">large</button>
+
+
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <label class="input-group-text" for="inputGroupSelect01">Size</label>
+                            </div>
+                            <select class="custom-select" id="inputGroupSelect01">
+                                <option value="1">Small - 1.00</option>
+                                <option value="2">Medium - $1.25</option>
+                                <option value="3">Large - $1.50</option>
+                            </select>
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <select class="custom-select" id="inputGroupSelect02">
+                                <option value="1">Diet Dr. Kelp</option>
+                                <option value="2">Barnacle Clack Cherry</option>
+                                <option value="3">Lagoon Lemon Lime</option>
+                            </select>
+                            <div class="input-group-append">
+                                <label class="input-group-text" for="inputGroupSelect02">Taste</label>
+                            </div>
+                        </div>
+
+
+
+
+
+                        <button type="button" class="btn btn-primary">give me a taste</button>
                     </div>
                 </div>
             </div>
         </div>
+<button type="button" class="btn btn-primary">TAKE ORDER</button>
     </div>
+
 
 
 

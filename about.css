@@ -7,12 +7,22 @@ body {
     font-family: krabbyPatty;
 }
 
+.booking-made {
+    visibility: hidden;
+    position: relative;
+    top: -200px;
+}
+
 .krabby-blue {
     background-color: #0457A0;
 }
 
 .krabby-light {
     background-color: #ebeccf;
+}
+
+.krabby-lightblue {
+    background-color: #bdd8ec;
 }
 
 .krabby-red {
@@ -31,6 +41,25 @@ body {
     color: #0457A0;
 }
 
+.text-krabby-lightblue{
+    color: #bdd8ec;
+}
+
 .text-spongebob-yellow {
     color: #f7e948;
+}
+
+.krusty-krab {
+    object-fit: cover;
+    object-position: 50% 25%;
+    transform: scale(1.5) translate(0, -25%);
+}
+
+@media only screen and (max-width: 600px)   {
+    .krusty-krab {
+        width: 110vw;
+        clip-path: inset(74% 0 0px 0px round 0px);
+        transform: translate(0, -73%);
+        order: 2;
+    }
 }

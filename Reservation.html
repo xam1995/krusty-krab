@@ -5,46 +5,54 @@
     <meta name="author" content="Max">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>The Krusty Krab - Reservation</title>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js">$('.dropdown-toggle').dropdown()</script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
-          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="about.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
+            integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
+            integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+            crossorigin="anonymous"></script>
+</head>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="about.css">
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark justify-content-md-center krabby-blue">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="navbar-burger"
-            aria-controls="navbar-burger" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse justify-content-md-center" id="navbar-burger">
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a href="" class="nav-link">
-                    Home
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="Menu.html" class="nav-link">
-                    Menu
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="Reservation.html" class="nav-link">
-                    Reservation
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="merch.html" class="nav-link">
-                    Merchandise
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="About.html" class="nav-link">
-                    About
-                </a>
-            </li>
-        </ul>
-    </div>
+<nav class="navbar navbar-expand navbar-dark justify-content-center krabby-blue">
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a href="" class="nav-link">
+                Home
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="Menu.html" class="nav-link">
+                Menu
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="Reservation.html" class="nav-link">
+                Reservation
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="merch.html" class="nav-link">
+                Merchandise
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="contact.html" class="nav-link">
+                Contact
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="About.html" class="nav-link">
+                About
+            </a>
+        </li>
+    </ul>
 </nav>
 <div class="position-relative overflow-hidden text-center vh-100 d-flex justify-content-center align-items-center row krabby-light">
     <div class="col-md-4 my-2">
@@ -66,7 +74,7 @@
     <div class="col-md-4">
         <h1 class="display-4 font-weight-normal text-krabby-blue">YOUR BOOKING</h1>
         <p class="lead font-weight-normal">Chose a date:</p>
-        <form class="d-flex flex-wrap flex-column align-items-center">
+        <form id="bookingForm" class="d-flex flex-wrap flex-column align-items-center" onsubmit=submitForm()>
             <div class="w-75 d-flex justify-content-between">
                 <label for="date">Date:</label>
                 <input class="input-lg col-xs" id="date" type="date" value="2023-05-11" required/>
@@ -78,33 +86,58 @@
             <div class="dropdown w-75 d-flex justify-content-between">
                 <label>Guests:</label>
                 <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                        value=1>
                     1
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
+                    <button id="2guests" class="dropdown-item" value=2 onclick=addGuests(this.value)>2</button>
+                    <button id="3guests" class="dropdown-item" value=3 onclick=addGuests(this.value)>3</button>
+                    <button id="4guests" class="dropdown-item" value=4 onclick=addGuests(this.value)>4</button>
+                    <button id="200guests" class="dropdown-item" value=200 onclick=addGuests(this.value)>A BUS FULL OF
+                        SARDINES
+                    </button>
                 </div>
             </div>
             <div class="w-75 d-flex justify-content-between">
                 <label for="name">Name:</label>
-                <input class="input-sm  col-xs"  id="name" type="name" placeholder="Patrick Star" required/>
+                <input class="input-sm  col-xs" id="name" type="name" placeholder="Patrick Star" required/>
             </div>
             <div class="w-75 d-flex justify-content-between">
                 <label for="tel">Phone:</label>
-                <input class="input-lg"  id="tel" type="tel" placeholder="+99 123 456 789" required/>
+                <input class="input-lg" id="tel" type="tel" placeholder="+99 123 456 789" required/>
             </div>
             <div class="w-75 d-flex justify-content-between">
                 <label for="mail">Mail:</label>
-                <input class="input-lg"  id="mail" type="email" placeholder="patrickstar84@snailmail.com" required/>
+                <input class="input-lg" id="mail" type="email" placeholder="patrickstar84@snailmail.com" required/>
             </div>
             <div>
                 <input type="submit" class="my-3 krabby-blue text-krabby-light">
             </div>
         </form>
+        <div id="bookingMade" class="booking-made">
+            <h1 id="confirmationText">A confirmation e-mail was sent to </h1>
+        </div>
     </div>
+    <script>
+        function submitForm() {
+            document.getElementById("bookingForm").style.visibility = "hidden";
+            var mail = document.getElementById("email").value;
+            console.log(mail);
+            document.getElementById("confirmationText").innerText = mail;
+            document.getElementById("bookingMade").style.visibility = "visible";
+        }
 
+        function addGuests(value) {
+            document.getElementById("dropdownMenuButton").innerText = value;
+        }
+    </script>
+    <script>
+        $('.dropdown-toggle').dropdown();
+        $("#bookingForm").submit(function (e) {
+            e.preventDefault();
+        });
+    </script>
 </div>
 </body>
 </html>

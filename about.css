@@ -13,6 +13,17 @@ body {
     top: -200px;
 }
 
+.color-back {
+    background-color: rgba(189, 216, 236, 0.6);
+    height: 35vh;
+}
+
+.hero-section .col-md-4 {
+    border: 5px solid #ff3b3b;
+    border-radius: 20px;
+    padding: 10px;
+}
+
 .krabby-blue {
     background-color: #0457A0;
 }
@@ -29,6 +40,35 @@ body {
     background-color: #ff3b3b;
 }
 
+.loader {
+    border: 16px solid #ebeccf;
+    border-top: 16px solid #0457A0;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    animation: spin 3s infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.loader-container {
+    background-color: #f7e948;
+    animation: hide 0s ease-in 5s;
+}
+@keyframes hide {
+   to {
+       visibility: hidden;
+       height: 0;
+       width: 0;
+   }
+}
 .text-krabby-light {
     color: #ebeccf;
 }
@@ -41,7 +81,7 @@ body {
     color: #0457A0;
 }
 
-.text-krabby-lightblue{
+.text-krabby-lightblue {
     color: #bdd8ec;
 }
 
@@ -55,7 +95,26 @@ body {
     transform: scale(1.5) translate(0, -25%);
 }
 
-@media only screen and (max-width: 600px)   {
+.navCostum {
+    padding-left: 150px;
+}
+
+.overlappingImg {
+    position: absolute;
+    z-index: 1;
+    top: 1vh;
+    left: 1vh;
+    height: 15vh;
+}
+
+section {
+    background-image: url("https://3.bp.blogspot.com/-a0QxML7vicQ/WWqf5exhetI/AAAAAAAAw6U/Fdmf-GCRHvYKbCLsioKq0QYuPOORaI73QCLcBGAs/s400/krabby-patty-spongebob-squarepants-nickelodeon-nick-sbsp-animated-gif.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+@media only screen and (max-width: 600px) {
     .krusty-krab {
         width: 110vw;
         clip-path: inset(74% 0 0px 0px round 0px);
@@ -63,3 +122,11 @@ body {
         order: 2;
     }
 }
+
+@media screen and (max-width: 960px) {
+    .overlappingImg {
+        height: 10vh;
+    }
+}
+
+
